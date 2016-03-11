@@ -1,7 +1,7 @@
 // Copyright (c) 2016, Alec Ruiz-Ramon and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("Board", "onload", function(doc, cdt, cdn){
+frappe.ui.form.on("Board", "onload", function(doc, cdt, cdn){ //onload for testing
 	var doc = locals[cdt][cdn]
 	frappe.call({
 		method: "kanban.kanban.board_methods.get_columns",
@@ -9,7 +9,7 @@ frappe.ui.form.on("Board", "onload", function(doc, cdt, cdn){
 			"doc" : doc
 		},
    	callback: function(r){
-		  console.log(r.message)
+		  console.log(r.message) // log for now, since in testing
 	  }
   })
 });
